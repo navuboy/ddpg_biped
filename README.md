@@ -3,6 +3,6 @@ Planar Bipedal walking robot in Gazebo environment using Deep Deterministic Poli
 
 Platforms and Package: ROS Kinetic, Gazebo, Solidworks, TensorFLow, Numpy
 
-**(1) walker_gazebo** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo launch file(ie, **walker_gazebo.launch**).
+**(1) walker_gazebo** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo launch file(ie,                       **walker_gazebo.launch**).
 
 
