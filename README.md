@@ -21,4 +21,4 @@ Platforms and Package: ROS Kinetic, Gazebo, Nvidia GeForce GTX 1050 Ti GPU, Soli
 </p>
 
 **Project video link: https://www.youtube.com/watch?v=Q4N78P7cink**
-<p>Note: The model was trained using a Nvidia GeForce GTX 1050 Ti GPU enable system for 41 hours.</p>
+<p>Note: A stable bipedal walking was acheived after training the model using a Nvidia GeForce GTX 1050 Ti GPU enable system for over 41 hours.</p>
