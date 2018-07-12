@@ -21,4 +21,4 @@ Platforms and Package: ROS Kinetic, Gazebo, Nvidia GeForce GTX 1050 Ti GPU, Soli
 </p>
 
 **Project video link: https://www.youtube.com/watch?v=Q4N78P7cink**
-Note: The model was trained using a Nvidia GeForce GTX 1050 Ti GPU enable system for 41 hours.
+<p>Note: The model was trained using a Nvidia GeForce GTX 1050 Ti GPU enable system for 41 hours.</p>
