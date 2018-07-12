@@ -1,4 +1,4 @@
-# RL4BIPED
+# RL4BIPED - Reinforcement Learning for Bipedal walking robot
 Planar Bipedal walking robot in Gazebo environment using Deep Deterministic Policy Gradient(DDPG).
 <p>
 The autonomous walking of the bipedal walking robot is achieved using reinforcement learning algorithm called <b>Deep Deterministic Policy Gradient(DDPG)</b>.DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
