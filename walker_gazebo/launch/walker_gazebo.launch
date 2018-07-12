@@ -1,0 +1,61 @@
+<launch>
+	  <!-- roslaunch arguments -->
+  <arg name="show_rviz" default="true"/>
+  <arg name="debug" default="false"/>
+  <arg name="gui" default="true"/>
+
+  <!-- Robot pose -->
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0"/>
+  <!-- <arg name="z" default="0.9"/> -->
+  <!-- <arg name="z" default="0.46828"/> -->
+  <!--<arg name="z" default="1.5"/>-->
+  <!-- <arg name="z" default="0.96"/> -->
+ <!--  <arg name="z"  default="1.035"/> when using with old model -->
+  <!-- <arg name="z" default="0.94"/> -->
+  <!--<arg name="z" default="0.935"/>--><!-- when using with shank_cone , no foot -->
+  <!-- <arg name="z" default="1.0"/> --><!-- when using with shank and foot -->
+  <arg name="roll" default="0"/>
+  <arg name="pitch" default="0"/>
+  <arg name="yaw" default="0"/>
+
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!--<arg name="world_name" value="$(find walker_gazebo)/launch/PDW_Foot_1.world"/>-->
+    <!-- more default parameters can be changed here -->
+    <arg name="paused" value="true"/>
+
+  </include>
+
+  <env name="GAZEBO_RESOURCE_PATH" value="$GAZEBO_RESOURCE_PATH:$(find walker_gazebo)/media/gazebo.material" />
+
+<!-- Spawn a robot into Gazebo -->
+<!--<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find walker_gazebo)/robots/simple_walker.urdf -urdf -z 1 -model simple _walker" output="screen" />-->
+<!-- urdf xml robot description loaded on the Parameter Server-->
+  <param name="robot_description" textfile='$(find walker_gazebo)/robots/simple_walker_08mar.urdf' />
+
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <node name="walker_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" 
+    args="-urdf -param robot_description -model walker -x $(arg x) -y $(arg y) -z $(arg z)
+              -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)" />
+
+<!-- robot visualization in Rviz -->
+  <group if="$(arg show_rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" output="screen"/> 
+
+    <rosparam file="$(find walker_controller)/config/joint_position_control.yaml" command="load" />
+    
+    <!-- <node name="walker_controller_node" pkg="controller_manager" type="spawner" output="screen" args="joint_state_controller waist_thighR_position_controller waist_thighL_position_controller thighR_shankR_position_controller thighL_shankL_position_controller waist_2dof_position_controller dof2_veritcal_rod_position_controller " /> -->
+    <node name="walker_controller_node" pkg="controller_manager" type="spawner" output="screen" args="joint_state_controller waist_thighR_position_controller waist_thighL_position_controller thighR_shankR_position_controller thighL_shankL_position_controller  " />
+    
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+  </node>
+  
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+  	<param name="use_gui" value="true"/>
+  </node>
+  </group>
+
+</launch>

@@ -1,0 +1,350 @@
+<sdf version='1.4'>
+  <world name='default'>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+  
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='PDW'>
+      <pose>0 0 0 0 -0 0</pose>
+      <static>0</static>
+      <link name='Outer_Legs'>
+        <visual name='Outer_Legs'>
+          <geometry>
+            <mesh>
+              <uri>base_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <collision name='Outer_Legs'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>base_link.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>0.5</mu2>
+              </ode> 
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <inertial>
+          <inertia>
+            <ixx>3.61</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.23</iyy>
+            <iyz>-0.07</iyz>
+            <izz>4.72</izz>
+          </inertia>
+          <pose>0 -1 -0.23 0 0 0</pose>
+          <mass>32.02</mass>
+        </inertial>
+      </link>
+      <link name='Inner_Legs'>
+        <visual name='Inner_Legs'>
+          <geometry>
+            <mesh>
+              <uri>middle.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <collision name='Inner_Legs'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>middle.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>0.5</mu2>
+              </ode> 
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <inertial>
+          <inertia>
+            <ixx>3.32</ixx>
+            <ixy>0</ixy>
+            <ixz>-0.01</ixz>
+            <iyy>1.34</iyy>
+            <iyz>-1.53</iyz>
+            <izz>2.04</izz>
+          </inertia>
+          <pose>0 -1.33 -1.33 0.77 0 0</pose>
+          <mass>19.53</mass>
+        </inertial>
+      </link>
+      <joint name='Joint' type='revolute'>
+        <pose>0 -0.1 0 0 -0 0</pose>
+        <child>Inner_Legs</child>
+        <parent>Outer_Legs</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1.5</lower>
+            <upper>0</upper>
+          </limit>
+        </axis>
+      </joint>
+    </model>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>6 837000000</sim_time>
+      <real_time>4 964272518</real_time>
+      <wall_time>1449363566 207389246</wall_time>
+      <model name='PDW'>
+        <pose>-4.88169 4.01672 2.35334 1.32242 0.013187 -1.56025</pose>
+        <link name='Inner_Legs'>
+          <pose>-4.82119 4.01795 2.30892 0.552909 0.013187 -1.56025</pose>
+          <velocity>0.018152 -0.018137 0.002971 0.50569 0.232182 -0.001658</velocity>
+          <acceleration>2.01416 -9.85766 3.13238 0.502301 -1.12123 1.08139</acceleration>
+          <wrench>39.3366 -192.52 61.1753 0 -0 0</wrench>
+        </link>
+        <link name='Outer_Legs'>
+          <pose>-4.88169 4.01672 2.35334 1.32242 0.013187 -1.56025</pose>
+          <velocity>0.08635 -0.124937 0.047127 0.437442 0.302334 -3e-06</velocity>
+          <acceleration>-2.36354 1.637 8.35983 -2.08575 -0.983479 0.040801</acceleration>
+          <wrench>-75.6805 52.4167 267.682 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='unit_box_1'>
+        <pose>-5.01259 3.99994 0.321333 -1.29247e-26 -3e-06 3e-05</pose>
+        <link name='link'>
+          <pose>-5.01259 3.99994 0.321333 -1.29247e-26 -3e-06 3e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='unit_box_2'>
+        <pose>-2.89106 3.99596 0.725653 0.004885 0.250926 0.020869</pose>
+        <link name='link'>
+          <pose>-2.89106 3.99596 0.725653 0.004885 0.250926 0.020869</pose>
+          <velocity>-0.008012 -0.00046 -0.033185 -0.078143 0.000961 0.018829</velocity>
+          <acceleration>-0.486912 0.631424 -5.01976 -1.95097 -0.54394 0.437499</acceleration>
+          <wrench>-48.6912 63.1424 -501.976 0 -0 0</wrench>
+        </link>
+      </model>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-6.02595 10.2822 4.11011 -3.09699e-17 0.459642 -1.55899</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+    <model name='unit_box_1'>
+      <pose>-5 4 0.5 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>100</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.566038 1 0.65</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.566038 1 0.65</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+    </model>
+    <model name='unit_box_2'>
+      <pose>-3 4 0.75 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>100</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>5.20995 1 0.157896</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode>
+                <mu>2</mu>
+                <mu2>1</mu2>
+              </ode> 
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>5.20995 1 0.157896</size>
+            </box>
+          </geometry>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+    </model>
+  </world>
+</sdf>

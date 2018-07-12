@@ -1,0 +1,17 @@
+
+material Gazebo/Transparent
+{
+  technique
+  {
+     
+    pass main
+    {
+      lighting 0
+      ambient 1 1 1 0.000000
+      diffuse 1 1 1 0.000000
+      specular 0.03 0.03 0.03 0.000000 
+      emissive 0.900000 0.900000 0.900000 0.000000
+      
+    }
+  }
+}
