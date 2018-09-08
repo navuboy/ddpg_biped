@@ -12,11 +12,11 @@ Packages and Platforms:
 - gym: 0.9.3
 - Python 2.7
 
-
+## File setup:
 - ***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo launch file.
 
 - ***walker_controller*** contains the reinforcement learning implementation of ****DDPG algorithm**** for control of the bipedal walking robot.
-
+ 
  ## Initial Learning Phase
 <p align= "center">
   <img src="walker_controller/src/training_1.gif/">
