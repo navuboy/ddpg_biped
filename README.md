@@ -25,5 +25,6 @@ Packages and Platforms:
 <p align= "center">
   <img src="walker_controller/src/trained.gif/">
 </p>
+
 **Project video link: https://goo.gl/1hwqJy**
 <p>Note: A stable bipedal walking was acheived after training the model using a Nvidia GeForce GTX 1050 Ti GPU enable system for over 41 hours.</p>
