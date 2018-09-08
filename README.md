@@ -6,16 +6,16 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
 Packages and Platforms: ROS Kinetic,Gazebo, TensorFLow (with GPU support) Nvidia GeForce GTX 1050 Ti GPU, OpenAI Gym.
 </p>
 
-***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo launch file.
+- ***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo launch file.
 
-***walker_controller*** contains the reinforcement learning implementation of ****DDPG algorithm**** for control of the bipedal walking robot.
+- ***walker_controller*** contains the reinforcement learning implementation of ****DDPG algorithm**** for control of the bipedal walking robot.
 
-**Initial Learning Phase**
+ ## Initial Learning Phase
 <p align= "center">
   <img src="walker_controller/src/training_1.gif/">
 </p>
 
-**Post Learning Phase - Stable Bipedal walking**
+  ## Post Learning Phase - Stable Bipedal walking
 <p align= "center">
   <img src="walker_controller/src/trained.gif/">
 </p>
