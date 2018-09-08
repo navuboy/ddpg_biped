@@ -1,8 +1,9 @@
 # RL4BIPED - Reinforcement Learning for Bipedal walking robot
 Planar Bipedal walking robot in Gazebo environment using Deep Deterministic Policy Gradient(DDPG).
-<p>
+
 The autonomous walking of the bipedal walking robot is achieved using reinforcement learning algorithm called <b>Deep Deterministic Policy Gradient(DDPG)</b>.DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
 <p>The results of the experiment have been documented in the research manuscript: <b>https://arxiv.org/abs/1807.05924v2</b></p>
+
 Packages and Platforms: 
 - Ubuntu 16.04 
 - ROS Kinetic (http://wiki.ros.org/kinetic)
@@ -10,7 +11,7 @@ Packages and Platforms:
 - TensorFLow: 1.1.0 (with GPU support)
 - gym: 0.9.3
 - Python 2.7
-</p>
+
 
 - ***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo launch file.
 
