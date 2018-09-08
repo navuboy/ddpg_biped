@@ -3,7 +3,13 @@ Planar Bipedal walking robot in Gazebo environment using Deep Deterministic Poli
 <p>
 The autonomous walking of the bipedal walking robot is achieved using reinforcement learning algorithm called <b>Deep Deterministic Policy Gradient(DDPG)</b>.DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
 <p>The results of the experiment have been documented in the research manuscript: <b>https://arxiv.org/abs/1807.05924v2</b></p>
-Packages and Platforms: ROS Kinetic,Gazebo, TensorFLow (with GPU support) Nvidia GeForce GTX 1050 Ti GPU, OpenAI Gym.
+Packages and Platforms: 
+- Ubuntu 16.04 
+- ROS Kinetic (http://wiki.ros.org/kinetic)
+- Gazebo 7 (http://gazebosim.org/)
+- TensorFLow: 1.1.0 (with GPU support)
+- gym: 0.9.3
+- Python 2.7
 </p>
 
 - ***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo launch file.
@@ -19,5 +25,5 @@ Packages and Platforms: ROS Kinetic,Gazebo, TensorFLow (with GPU support) Nvidia
 <p align= "center">
   <img src="walker_controller/src/trained.gif/">
 </p>
-Project video link: https://goo.gl/1hwqJy
+**Project video link: https://goo.gl/1hwqJy**
 <p>Note: A stable bipedal walking was acheived after training the model using a Nvidia GeForce GTX 1050 Ti GPU enable system for over 41 hours.</p>
