@@ -5,7 +5,7 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
 <p>The results of the experiment have been documented in the research manuscript: <b>https://arxiv.org/abs/1807.05924v2</b></p>
 
 **Packages and Platforms:** 
-- Ubuntu 16.04 
+- Ubuntu 16.04 (http://releases.ubuntu.com/16.04/)
 - ROS Kinetic (http://wiki.ros.org/kinetic)
 - Gazebo 7 (http://gazebosim.org/)
 - TensorFlow: 1.1.0 (https://www.tensorflow.org/) [with GPU support] 
