@@ -9,7 +9,7 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
 - ROS Kinetic (http://wiki.ros.org/kinetic)
 - Gazebo 7 (http://gazebosim.org/)
 - TensorFlow: 1.1.0 (with GPU support)
-- gym: 0.9.3
+- gym: 0.9.3 (https://github.com/openai/gym)
 - Python 2.7
 
 ## File setup:
