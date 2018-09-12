@@ -113,9 +113,9 @@ class CriticNetwork:
 		checkpoint = tf.train.get_checkpoint_state("critic-weights")
 		if checkpoint and checkpoint.model_checkpoint_path:
 			self.saver.restore(self.sess, checkpoint.model_checkpoint_path)
-			print "Successfully loaded:", checkpoint.model_checkpoint_path
+			print ('Successfully loaded:'), checkpoint.model_checkpoint_path
 		else:
-			print "Could not find old network weights"
+			print ('Could not find old network weights')
 
 	def save_network(self):
 		self.saver2 = tf.train.Saver()
