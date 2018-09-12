@@ -108,7 +108,7 @@ def reset():
     try:
         reset_simulation()
     except(rospy.ServiceException) as e:
-        print "reset_world failed!"
+        print ('reset_world failed!')
 
 
     rospy.wait_for_service('gazebo/set_model_configuration')
@@ -117,13 +117,13 @@ def reset():
         reset_joints("walker", "robot_description", ['boom_waist', 'outer_ring_inner_ring', 'thighL_shankL', 'thighR_shankR', 'waist_thighL', 'waist_thighR'], [0.0,0.0,0.0, 0.0, 0.0, 0.0])
         robot_state.last_outer_ring_inner_ring_theta = 0.0
     except (rospy.ServiceException) as e:
-        print "reset_joints failed!"
+        print ('reset_joints failed!')
 
     rospy.wait_for_service('/gazebo/pause_physics')
     try:
         pause()
     except (rospy.ServiceException) as e:
-        print "rospause failed!"
+        print ('rospause failed!')
 
     set_robot_state()
 
@@ -141,7 +141,7 @@ def take_action(action):
     try:
         unpause()
     except (rospy.ServiceException) as e:
-        print "/gazebo/pause_physics service call failed"
+        print ('/gazebo/pause_physics service call failed')
 
     pubHipR.publish(action[0])
     pubKneeR.publish(action[1])
@@ -167,7 +167,7 @@ def take_action(action):
         reward += 100
         robot_state.done = True
         robot_state.fall = 1
-        print "REACHED TO THE END!"
+        print ('REACHED TO THE END!')
     rate.sleep()
     return reward, robot_state.done
 
@@ -252,7 +252,7 @@ def callbackContactShankL(data):
 
 
 def listener():
-    print "listener"
+    print ('listener')
     # rospy.init_node('listener', anonymous=True)
     # rospy.Subscriber("/thighR_shankR_position_controller/state", JointControllerState, callbackSubKneeL)
     # rospy.Subscriber("/thighL_shankL_position_controller/state", JointControllerState, callbackSubKneeR)
@@ -285,7 +285,7 @@ def publisher(pubHipR, pubHipL, pubKneeR, pubKneeL, rate, counter):
         
         env = [12, 4] # [state_dim, action_dim]
         agent = DDPG(env)
-        for episode in xrange(EPISODES):
+        for episode in range(EPISODES):
             reset()
             state = robot_state.robot_state
             # Train
@@ -306,10 +306,10 @@ def publisher(pubHipR, pubHipL, pubKneeR, pubKneeL, rate, counter):
                 traj_writer = csv.writer(traj_file, delimiter='\t')
                 traj_writer.writerow(['z', 'y', 'vel_z', 'vel_y', 'hr', 'hl', 'hr_dot', 'hl_dot', 'kr', 'kl', 'kr_dot', 'kl_dot', 'fr', 'fl'])
 
-                print "testing"
+                print ('testing')
                 total_reward = 0
                 count_of_1 = 0
-                for i in xrange(TEST):
+                for i in range(TEST):
                     reset()
                     state = robot_state.robot_state
                     for steps in range(1600):
@@ -332,7 +332,7 @@ def publisher(pubHipR, pubHipL, pubKneeR, pubKneeL, rate, counter):
                 writer.writerow([ave_reward])
                 file.flush()
             
-                print 'episode: ',episode,'Evaluation Average Reward:',ave_reward
+                print ('episode: '),episode,'Evaluation Average Reward:',ave_reward
                 # print "best_reward: ", robot_state.best_reward
    
 def main():
