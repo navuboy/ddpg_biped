@@ -10,7 +10,7 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
 - Gazebo 7 (http://gazebosim.org/)
 - TensorFlow: 1.1.0 (https://www.tensorflow.org/) [with GPU support] 
 - gym: 0.9.3 (https://github.com/openai/gym)
-- Python 2.7
+- Python 3.6
 
 ## File setup:
 - ***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo launch file.
