@@ -4,7 +4,7 @@ Planar Bipedal walking robot in Gazebo environment using Deep Deterministic Poli
 The autonomous walking of the bipedal walking robot is achieved using reinforcement learning algorithm called <b>Deep Deterministic Policy Gradient(DDPG)</b>.DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
 <p>The results of the experiment have been documented in the research manuscript: <b>https://arxiv.org/abs/1807.05924v2</b></p>
 
-**Packages and Platforms:** 
+**Dependencies & Packages:** 
 - Ubuntu 16.04 (http://releases.ubuntu.com/16.04/)
 - ROS Kinetic (http://wiki.ros.org/kinetic)
 - Gazebo 7 (http://gazebosim.org/)
