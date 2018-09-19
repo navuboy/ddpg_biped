@@ -35,3 +35,4 @@ https://goo.gl/1hwqJy
 ## References:
 - **Continuous control with deep reinforcement learning.** Timothy P. Lillicrap, Jonathan J. Hunt, Alexander Pritzel, Nicolas Heess, Tom Erez, Yuval Tassa, David Silver, Daan Wierstra (https://arxiv.org/abs/1509.02971)
 - **Deterministic Policy Gradient Algorithms.** David Silver, Guy Lever, Nicolas Heess, Daan Wierstra,  Thomas Degris,  Martin Riedmiller (http://proceedings.mlr.press/v32/silver14.pdf)
+- **Bipedal walking robot using Deep Deterministic Policy Gradient.** A Kumar, N Paul, SN Omkar - arXiv preprint arXiv:1807.05924, 2018 (https://arxiv.org/abs/1807.05924v2)
