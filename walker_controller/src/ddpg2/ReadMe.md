@@ -6,3 +6,6 @@ roslaunch walker_gazebo.launch
 ```
 python3 gym_ddpg3.py
 ```
+<p align= "center">
+  <img src="walker_controller/src/training_2.gif/">
+</p>
