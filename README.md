@@ -19,7 +19,7 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
  
  ## Initial Learning Phase
 <p align= "center">
-  <img src="walker_controller/src/training_1.gif/">
+  <img src="walker_controller/src/training_1.gif/" height="350" width="600">
 </p>
 
   ## Post Learning Phase - Stable Bipedal walking
