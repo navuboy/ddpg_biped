@@ -13,9 +13,9 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
 - Python 3.6
 
 ## File setup:
-- ***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo launch file.
+- ***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo **launch** file.
 
-- ***walker_controller*** contains the reinforcement learning implementation of ****DDPG algorithm**** for control of the bipedal walking robot.
+- ***walker_controller*** contains the reinforcement learning implementation of **DDPG algorithm** for control of the bipedal walking robot.
  
  ## Initial Learning Phase
 <p align= "center">
