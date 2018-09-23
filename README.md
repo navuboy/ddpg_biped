@@ -38,7 +38,7 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
 ## References:
 <ol>
   <li><b><a href="https://arxiv.org/abs/1509.02971">Continuous control with deep reinforcement learning.</a></b> Timothy P. Lillicrap, Jonathan J. Hunt, Alexander Pritzel, Nicolas Heess,Tom Erez, Yuval Tassa, David Silver, Daan Wierstra  </li>
-<li><b><a href="http://proceedings.mlr.press/v32/silver14.pdf">Deterministic Policy Gradient Algorithms.</a></b> David Silver, Guy Lever, Nicolas Heess, Daan Wierstra,  Thomas Degris,  Martin Riedmiller</li>
+<li><b><a href="http://proceedings.mlr.press/v32/silver14.pdf">Deterministic Policy Gradient Algorithms.</a></b> David Silver, Guy Lever, Nicolas Heess, Daan Wierstra, Thomas Degris, Martin Riedmiller</li>
 </ol>
 
 ## Project Collaborator(s): 
