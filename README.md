@@ -1,4 +1,4 @@
-# <h1 style="text-align:center;">Reinforcement Learning for Bipedal walking robot.</h1>
+# Reinforcement Learning for Bipedal walking robot.
 <p align= "center">
   <img src="walker_controller/src/biped.gif/">
 </p>
