@@ -33,7 +33,7 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
 ## Project video: 
 **https://goo.gl/1hwqJy**
 
-**Note:** A stable bipedal walking was acheived after training the model using a Nvidia GeForce GTX 1050 Ti GPU enabled system for over 41 hours. The visualization for the boom(attached to the waist) in turned off.
+**Note:** A stable bipedal walking was acheived after training the model using a Nvidia GeForce GTX 1050 Ti GPU enabled system for over 41 hours. The visualization for the horizontal boom(attached to the waist) in turned off.
 
 ## References:
 <ol>
