@@ -42,4 +42,4 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
 </ol>
 
 ## Project Collaborator(s): 
-**Arun Kumar** (https://github.com/ioarun)
+**<a href="https://github.com/ioarun">Arun Kumar</a>** 
