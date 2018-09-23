@@ -4,7 +4,7 @@
 </p>
 
 ## Planar Bipedal walking robot in Gazebo environment using Deep Deterministic Policy Gradient(DDPG).
-The autonomous walking of the bipedal walking robot is achieved using reinforcement learning algorithm called <b>Deep Deterministic Policy Gradient(DDPG)</b>. DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
+The autonomous walking of the bipedal walking robot is achieved using reinforcement learning algorithm called <b>Deep Deterministic Policy Gradient(DDPG)<sup>1</sup></b>. DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
 <p>The results of the experiment have been documented in the research manuscript, <b>Bipedal walking robot using Deep Deterministic Policy Gradient (https://arxiv.org/abs/1807.05924v2)</b></p>
 
 ## Dependencies & Packages:
@@ -36,8 +36,10 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
 **Note:** A stable bipedal walking was acheived after training the model using a Nvidia GeForce GTX 1050 Ti GPU enable system for over 41 hours. The visualization for the boom(attached to the waist) in turned off).
 
 ## References:
-- **Continuous control with deep reinforcement learning.** Timothy P. Lillicrap, Jonathan J. Hunt, Alexander Pritzel, Nicolas Heess, Tom Erez, Yuval Tassa, David Silver, Daan Wierstra (https://arxiv.org/abs/1509.02971)
-- **Deterministic Policy Gradient Algorithms.** David Silver, Guy Lever, Nicolas Heess, Daan Wierstra,  Thomas Degris,  Martin Riedmiller (http://proceedings.mlr.press/v32/silver14.pdf)
+<ol>
+  <li><b>Continuous control with deep reinforcement learning.</b> Timothy P. Lillicrap, Jonathan J. Hunt, Alexander Pritzel, Nicolas Heess,Tom Erez, Yuval Tassa, David Silver, Daan Wierstra (https://arxiv.org/abs/1509.02971) </li>
+<li><b>Deterministic Policy Gradient Algorithms.</b> David Silver, Guy Lever, Nicolas Heess, Daan Wierstra,  Thomas Degris,  Martin Riedmiller (http://proceedings.mlr.press/v32/silver14.pdf)</li>
+</ol>
 
 ## Project Collaborator(s): 
 **Arun Kumar** (https://github.com/ioarun)
