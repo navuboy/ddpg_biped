@@ -31,8 +31,7 @@ This project was initially developed at the <b>Computational Intelligence Labora
   <img src="walker_controller/src/trained.gif/" height="350" width="600">
 </p>
 
-## Project video: 
-**https://goo.gl/1hwqJy**
+**<a href="https://goo.gl/1hwqJy*">Project video</a>**
 
 **Note:** A stable bipedal walking was acheived after training the model using a Nvidia GeForce GTX 1050 Ti GPU enabled system for over 41 hours. The visualization for the horizontal boom(attached to the waist) in turned off.
 
