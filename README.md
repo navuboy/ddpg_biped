@@ -38,9 +38,9 @@ This project was initially developed at the <b>Computational Intelligence Labora
 
 ## References:
 <ol>
-  <li><b><a href="https://arxiv.org/abs/1509.02971">Continuous control with deep reinforcement learning.</a></b> Timothy P. Lillicrap, Jonathan J. Hunt, Alexander Pritzel, Nicolas Heess,Tom Erez, Yuval Tassa, David Silver, Daan Wierstra  </li>
-<li><b><a href="http://proceedings.mlr.press/v32/silver14.pdf">Deterministic Policy Gradient Algorithms.</a></b> David Silver, Guy Lever, Nicolas Heess, Daan Wierstra, Thomas Degris, Martin Riedmiller</li>
-</ol>
+  <li>Lillicrap, Timothy P., et al.<b><a href="https://arxiv.org/abs/1509.02971">Continuous control with deep reinforcement learning.</a></b> arXiv preprint arXiv:1509.02971 (2015).</li>
+<li>Silver, David, et al.<b><a href="http://proceedings.mlr.press/v32/silver14.pdf">Deterministic Policy Gradient Algorithms.</a></b> ICML. 2014.</li>
+</ol> 
 
 ## Project Collaborator(s): 
 **<a href="https://github.com/ioarun">Arun Kumar</a>** 
