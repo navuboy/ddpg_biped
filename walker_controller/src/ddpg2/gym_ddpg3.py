@@ -210,32 +210,13 @@ def callbackJointStates(data):
         robot_state.hipr_theta = 0
     
     
-    # if robot_state.outer_ring_inner_ring_theta < 0:
-    #     print "NEGATIVE OUTER RING INNER RING THETA!"
     set_robot_state()
     # rate.sleep()
 
 
 def callbackSub(data):
-    # rospy.loginfo("I heard %s",data)
-    # print "subscribed: ", str(data)
-    # robot_state.waist_z = data.pose[3].position.z
-    # robot_state.vel_y = data.twist[3].linear.y
-    # robot_state.vel_z = data.twist[3].linear.z
     set_robot_state()
-    # if robot_state.waist_z < 0.50:
-    #     robot_state.fall = 1
-    #     reset_simulation()
-    #     reset_joints("walker", "robot_description", ["waist_thighR", "waist_thighL", "thighR_shankR", "thighL_shankL", "waist_pendulum", "top_pendulum"], [0.0,0.0,0.0,0.0,0.0, 0.0])
-    #     set_robot_state()
-    # if robot_state.waist_z < 0.20:
-    #     # reward = 0
-        
-    #     robot_state.fall = 1
-    #     # reset_joints("walker", "robot_description", ["waist_thighR", "waist_thighL", "thighR_shankR", "thighL_shankL", "waist_pendulum", "top_pendulum"], [0.0,0.0,0.0,0.0,0.0, 0.0])
-    #     reset_simulation()
-    #     set_robot_state()
-
+    
 def callbackContactShankR(data):
     if not data.states:
         robot_state.footr_contact = 0
@@ -249,30 +230,13 @@ def callbackContactShankL(data):
     else:
         robot_state.footl_contact = 1
 
-
-
 def listener():
     print ('listener')
-    # rospy.init_node('listener', anonymous=True)
-    # rospy.Subscriber("/thighR_shankR_position_controller/state", JointControllerState, callbackSubKneeL)
-    # rospy.Subscriber("/thighL_shankL_position_controller/state", JointControllerState, callbackSubKneeR)
-    # rospy.Subscriber("/waist_thighR_position_controller/state", JointControllerState, callbackSubHipR)
-    # rospy.Subscriber("/waist_thighL_position_controller/state", JointControllerState, callbackSubHipL)
-    # rospy.Subscriber("/waist_2dof_position_controller/state", JointControllerState, callbackSub2DOF)
-    # rospy.Subscriber("/dof2_veritcal_rod_position_controller/state", JointControllerState, callbackSubPendulum)
-    # rospy.Subscriber("/vertical_rod_balance_pendulum_position_controller/state", JointControllerState, callbackSubTop)
+    
     rospy.Subscriber("/joint_states", JointState, callbackJointStates)
-    # rospy.Subscriber("/gazebo/link_states", LinkStates, callbackSub)
     rospy.Subscriber("/footR_contact_sensor_state", ContactsState, callbackContactShankR)
     rospy.Subscriber("/footL_contact_sensor_state", ContactsState, callbackContactShankL)
-    # rospy.Subscriber("/joy", Joy, callbackJoy)
-    # link_states = message_filters.Subscriber('/gazebo/link_states', LinkStates)
-    # joint_states = message_filters.Subscriber('/thighR_shankR_position_controller/state', JointControllerState)
-
-    # ts = message_filters.TimeSynchronizer([link_states, joint_states], 10)
-    # ts.registerCallback(callbackSub)
-    # rospy.spin()
-    # print "rospy.spin()"
+    
 
 def publisher(pubHipR, pubHipL, pubKneeR, pubKneeL, rate, counter):
 
