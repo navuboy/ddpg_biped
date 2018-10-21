@@ -9,12 +9,12 @@ The autonomous walking of the bipedal walking robot is achieved using reinforcem
 This project was developed at the <a href="https://sites.google.com/site/compintellab/home"><b>Computational Intelligence Laboratory, IISc, Bangalore</b></a>.
 
 ## Dependencies & Packages:
-- <a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04</a>
-- <a href="http://wiki.ros.org/kinetic">ROS Kinetic</a>
-- <a href="http://gazebosim.org/">Gazebo 7</a>
-- <a href="https://www.tensorflow.org/">TensorFlow: 1.1.0 [with GPU support]</a> 
-- <a href="https://gym.openai.com/docs/">gym: 0.9.3</a>
-- Python 3.6
+- <b><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04</a></b>
+- <b><a href="http://wiki.ros.org/kinetic">ROS Kinetic</a></b>
+- <b><a href="http://gazebosim.org/">Gazebo 7</a></b>
+- <b><a href="https://www.tensorflow.org/">TensorFlow: 1.1.0 [with GPU support]</a></b> 
+- <b><a href="https://gym.openai.com/docs/">gym: 0.9.3</a></b>
+- <b>Python 3.6</b>
 
 ## File setup:
 - ***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo **launch** file.
