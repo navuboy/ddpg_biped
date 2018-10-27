@@ -21,7 +21,7 @@ This project was developed at the <a href="https://sites.google.com/site/compint
 
 - ***walker_controller*** contains the reinforcement learning implementation of **DDPG algorithm** for control of the bipedal walking robot.
  
- ## Initial Learning Phase
+ ## Initial Learning Phases
 <p align= "center">
   <img src="walker_controller/src/training_1.gif/" height="250" width="400" hspace="5">
   <img src="walker_controller/src/training_2.gif/" height="250" width="400">
