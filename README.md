@@ -1,4 +1,5 @@
 # Reinforcement Learning for Bipedal walking robot.
+This repository contains the simulation architecture for implementing reinforcement learning algorithm, DDPG for generating bipedal walking patterns out of scratch. 
 <p align= "center">
   <img src="walker_controller/src/biped.gif/">
 </p>
