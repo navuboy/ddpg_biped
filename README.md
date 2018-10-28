@@ -1,5 +1,5 @@
 # Reinforcement Learning for Bipedal walking robot.
-This repository contains the <b>simulation architecture</b> based in <b>Gazebo</b> environment for implementing reinforcement learning algorithm, <b>DDPG</b> for generating bipedal walking patterns out of scratch. 
+This repository contains the <b>simulation architecture</b> based in <b>Gazebo</b> environment for implementing reinforcement learning algorithm, <b>DDPG</b> for generating bipedal walking patterns for the robot. 
 <p align= "center">
   <img src="walker_controller/src/biped.gif/">
 </p>
