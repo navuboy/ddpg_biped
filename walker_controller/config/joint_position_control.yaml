@@ -2,7 +2,7 @@ joint_state_controller:
   type: joint_state_controller/JointStateController
   publish_rate: 50
 
-# Position Controllers ---------------------------------------
+# Effort Controllers & Position Controllers
 waist_thighR_position_controller:
   type: effort_controllers/JointEffortController
   joint: waist_thighR
@@ -27,64 +27,8 @@ boom_waist_position_controller:
   joint: boom_waist
   pid: {p: 1, i: 0.001, d: 0.065}
 
-# inner_ring_boom_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: inner_ring_boom
-#   pid: {p: 1, i: 0.001, d: 0.065}
-
 outer_ring_inner_ring_position_controller:
   type: effort_controllers/JointPositionController
   joint: outer_ring_inner_ring
   pid: {p: 1, i: 0.001, d: 0.065}
 
-# waist_2dof_position_controller:
-#   type: effort_controllers/JointEffortController
-#   joint: waist_2dof
-#   pid: {p: 1, i: 0.001, d: 0.065}
-
-# dof2_veritcal_rod_position_controller:
-#   type: effort_controllers/JointEffortController
-#   joint: 2dof_vertical_rod
-#   pid: {p: 1, i: 0.001, d: 0.065}
-
-# vertical_rod_balance_pendulum_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: vertical_rod_balance_pendulum
-#   pid: {p: 1, i: 0.01, d: 0.1}
-
-
-# shankR_footR_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: shankR_footR
-#   pid: {p: 1, i: 0.001, d: 0.065}
-
-# shankL_footL_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: shankL_footL
-#   pid: {p: 1, i: 0.001, d: 0.065}
-  
-# waist_pendulum_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: waist_pendulum
-#   pid: {p: 100.0, i: 0.01, d: 10.0}
-
-# top_pendulum_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: top_pendulum
-#   pid: {p: 100.0, i: 0.01, d: 10.0}
-
-# shankL_footL_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: shankL_footL
-#   pid: {p: 100.0, i: 0.01, d: 10.0}
-
-# waist_boom_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: waist_boom
-#   pid: {p: 100.0, i: 0.01, d: 10.0}
-
-
-# pivot_boom_position_controller:
-#   type: effort_controllers/JointPositionController
-#   joint: boom_pivot
-#   pid: {p: 100.0, i: 0.01, d: 10.0}
