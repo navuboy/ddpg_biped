@@ -1,0 +1,36 @@
+#Controller script for the biped walker#
+
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+# Effort Controllers & Position Controllers
+waist_thighR_position_controller:
+  type: effort_controllers/JointEffortController
+  joint: waist_thighR
+  pid: {p: 1, i: 0.001, d: 0.065}
+
+waist_thighL_position_controller:
+  type: effort_controllers/JointEffortController
+  joint: waist_thighL
+  pid: {p: 1, i: 0.001, d: 0.065}
+
+thighR_shankR_position_controller:
+  type: effort_controllers/JointEffortController
+  joint: thighR_shankR
+  pid: {p: 1, i: 0.001, d: 0.065}
+thighL_shankL_position_controller:
+  type: effort_controllers/JointEffortController
+  joint: thighL_shankL
+  pid: {p: 1, i: 0.001, d: 0.065}
+
+boom_waist_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: boom_waist
+  pid: {p: 1, i: 0.001, d: 0.065}
+
+outer_ring_inner_ring_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: outer_ring_inner_ring
+  pid: {p: 1, i: 0.001, d: 0.065}
+
