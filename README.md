@@ -28,7 +28,7 @@ This project was developed at the <a href="https://sites.google.com/site/compint
   <img src="walker_controller/src/training_2.gif/" height="250" width="400">
 </p>
  
- ## Post Learning Phase - Stable Bipedal walking
+ ## Stable Bipedal walking
 <p align= "center">
   <img src="walker_controller/src/trained.gif/" height="300" width="550">
 </p>
