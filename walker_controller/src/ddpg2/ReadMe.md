@@ -6,7 +6,7 @@ roslaunch walker_gazebo.launch
 ```
 python3 gym_ddpg3.py
 ```
-The reward function that is used is mentioned below:
+The reward function that is defined for the reinforcement problem is mentioned below:
 ```python 
   reward = -0.1 
       current_time = time.time()
