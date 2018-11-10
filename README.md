@@ -5,7 +5,7 @@ This repository contains the <b>simulation architecture</b> based in <b>Gazebo</
 </p>
 
 ## Planar Bipedal walking robot in Gazebo environment using Deep Deterministic Policy Gradient(DDPG).
-The autonomous walking of the bipedal walking robot is achieved using reinforcement learning algorithm called <a href="https://github.com/nav74neet/ddpg_biped#references"><b>Deep Deterministic Policy Gradient(DDPG)<sup>1</sup></b></a>. DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
+The <strong>autonomous walking</strong> of the bipedal walking robot is achieved using reinforcement learning algorithm called <a href="https://github.com/nav74neet/ddpg_biped#references"><b>Deep Deterministic Policy Gradient(DDPG)<sup>1</sup></b></a>. DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
 <p>The project details & the results of the experiment have been documented in the research manuscript, <b><a href="https://arxiv.org/abs/1807.05924v2">Bipedal walking robot using Deep Deterministic Policy Gradient</a></b></p>
 This project was developed at the <a href="https://sites.google.com/site/compintellab/home"><b>Computational Intelligence Laboratory, IISc, Bangalore</b></a>.
 
