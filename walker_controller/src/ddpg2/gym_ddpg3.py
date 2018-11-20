@@ -94,7 +94,7 @@ class Publisher(threading.Thread):
         self.pubKneeR = pubKneeR
         self.pubKneeL = pubKneeL
         self.rate = rate
-        
+
 
     def run(self):
         publisher(self.pubHipR, self.pubHipL, self.pubKneeR, self.pubKneeL, self.rate, self.counter)
@@ -108,7 +108,7 @@ def reset():
     try:
         reset_simulation()
     except(rospy.ServiceException) as e:
-        print ('reset_world failed!')
+        print "reset_world failed!"
 
 
     rospy.wait_for_service('gazebo/set_model_configuration')
@@ -117,18 +117,18 @@ def reset():
         reset_joints("walker", "robot_description", ['boom_waist', 'outer_ring_inner_ring', 'thighL_shankL', 'thighR_shankR', 'waist_thighL', 'waist_thighR'], [0.0,0.0,0.0, 0.0, 0.0, 0.0])
         robot_state.last_outer_ring_inner_ring_theta = 0.0
     except (rospy.ServiceException) as e:
-        print ('reset_joints failed!')
+        print "reset_joints failed!"
 
     rospy.wait_for_service('/gazebo/pause_physics')
     try:
         pause()
     except (rospy.ServiceException) as e:
-        print ('rospause failed!')
+        print "rospause failed!'"
 
     set_robot_state()
 
     # print "called reset()"
-     
+
 
 
 def set_robot_state():
@@ -137,37 +137,37 @@ def set_robot_state():
 
 def take_action(action):
     rospy.wait_for_service('/gazebo/unpause_physics')
-    
+
     try:
         unpause()
     except (rospy.ServiceException) as e:
-        print ('/gazebo/pause_physics service call failed')
+        print "/gazebo/pause_physics service call failed"
 
     pubHipR.publish(action[0])
     pubKneeR.publish(action[1])
     pubHipL.publish(action[2])
     pubKneeL.publish(action[3])
-    
+
     reward = -0.1  # when it used to run, used to be -0.1
     current_time = time.time()
     if (robot_state.outer_ring_inner_ring_theta - robot_state.last_outer_ring_inner_ring_theta) <= -0.09: #-0.001forward motion
-         
+
         delta_time = current_time - robot_state.last_time
-       
+
         reward += -((robot_state.outer_ring_inner_ring_theta - robot_state.last_outer_ring_inner_ring_theta))*10
-    robot_state.last_time = current_time   
+    robot_state.last_time = current_time
     robot_state.last_outer_ring_inner_ring_theta = robot_state.outer_ring_inner_ring_theta
 
-    if robot_state.waist_z < -0.10: 
+    if robot_state.waist_z < -0.10:
         reward += -100
         robot_state.done = True
         robot_state.fall = 1
-  
+
     if robot_state.outer_ring_inner_ring_theta < -9.0:
         reward += 100
         robot_state.done = True
         robot_state.fall = 1
-        print ('REACHED TO THE END!')
+        print "REACHED TO THE END!"
     rate.sleep()
     return reward, robot_state.done
 
@@ -208,15 +208,15 @@ def callbackJointStates(data):
         robot_state.kneer_theta = 0
         robot_state.hipl_theta = 0
         robot_state.hipr_theta = 0
-    
-    
+
+
     set_robot_state()
     # rate.sleep()
 
 
 def callbackSub(data):
     set_robot_state()
-    
+
 def callbackContactShankR(data):
     if not data.states:
         robot_state.footr_contact = 0
@@ -231,12 +231,12 @@ def callbackContactShankL(data):
         robot_state.footl_contact = 1
 
 def listener():
-    print ('listener')
-    
+    print "listener"
+
     rospy.Subscriber("/joint_states", JointState, callbackJointStates)
     rospy.Subscriber("/footR_contact_sensor_state", ContactsState, callbackContactShankR)
     rospy.Subscriber("/footL_contact_sensor_state", ContactsState, callbackContactShankL)
-    
+
 
 def publisher(pubHipR, pubHipL, pubKneeR, pubKneeL, rate, counter):
 
@@ -246,14 +246,14 @@ def publisher(pubHipR, pubHipL, pubKneeR, pubKneeL, rate, counter):
         file = open(reward_file, 'wt')
         writer = csv.writer(file)
         writer.writerow(['avg_reward'])
-        
+
         env = [12, 4] # [state_dim, action_dim]
         agent = DDPG(env)
         for episode in range(EPISODES):
             reset()
             state = robot_state.robot_state
             # Train
-            
+
             for steps in range(1600):
                 action = agent.noise_action(state)
                 reward,done = take_action(action)
@@ -270,7 +270,7 @@ def publisher(pubHipR, pubHipL, pubKneeR, pubKneeL, rate, counter):
                 traj_writer = csv.writer(traj_file, delimiter='\t')
                 traj_writer.writerow(['z', 'y', 'vel_z', 'vel_y', 'hr', 'hl', 'hr_dot', 'hl_dot', 'kr', 'kl', 'kr_dot', 'kl_dot', 'fr', 'fl'])
 
-                print ('testing')
+                print "testing"
                 total_reward = 0
                 count_of_1 = 0
                 for i in range(TEST):
@@ -295,10 +295,10 @@ def publisher(pubHipR, pubHipL, pubKneeR, pubKneeL, rate, counter):
                 robot_state.avg_reward = ave_reward
                 writer.writerow([ave_reward])
                 file.flush()
-            
-                print ('episode: '),episode,'Evaluation Average Reward:',ave_reward
+
+                print "episode: ",episode,"Evaluation Average Reward: ",ave_reward
                 # print "best_reward: ", robot_state.best_reward
-   
+
 def main():
 
     # Create new threads

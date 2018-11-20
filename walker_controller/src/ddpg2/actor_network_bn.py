@@ -1,4 +1,4 @@
-import tensorflow as tf 
+import tensorflow as tf
 from tensorflow.contrib.layers.python.layers import batch_norm as batch_norm
 import numpy as np
 import math
@@ -78,7 +78,7 @@ class ActorNetwork:
 
 		action_output = tf.tanh(tf.matmul(layer2_bn,target_net[4]) + target_net[5])
 
-		
+
 		return state_input,action_output,target_update,is_training
 
 	def update_target(self):
@@ -117,7 +117,7 @@ class ActorNetwork:
 
 
 	def batch_norm_layer(self,x,training_phase,scope_bn,activation=None):
-		return tf.cond(training_phase, 
+		return tf.cond(training_phase,
 		lambda: tf.contrib.layers.batch_norm(x, activation_fn=activation, center=True, scale=True,
 		updates_collections=None,is_training=True, reuse=None,scope=scope_bn,decay=0.9, epsilon=1e-5),
 		lambda: tf.contrib.layers.batch_norm(x, activation_fn =activation, center=True, scale=True,
@@ -128,14 +128,10 @@ class ActorNetwork:
 		checkpoint = tf.train.get_checkpoint_state("actor-weights")
 		if checkpoint and checkpoint.model_checkpoint_path:
 			self.saver.restore(self.sess, checkpoint.model_checkpoint_path)
-			print ('Successfully loaded:'), checkpoint.model_checkpoint_path
+			print "Successfully loaded:", checkpoint.model_checkpoint_path
 		else:
-			print ('Could not find old network weights')
+			print "Could not find old network weights"
 	def save_network(self):
 		self.saver2 = tf.train.Saver()
 		# print 'save actor-network...'
 		self.saver2.save(self.sess, 'weights/actor-weights/actor-weights')
-
-
-
-		

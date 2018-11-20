@@ -1,3 +1,5 @@
+#Controller script for the biped walker#
+
 joint_state_controller:
   type: joint_state_controller/JointStateController
   publish_rate: 50

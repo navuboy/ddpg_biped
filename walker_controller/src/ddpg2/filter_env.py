@@ -77,9 +77,9 @@ def makeFilteredEnv(env):
 
   fenv = FilteredEnv()
 
-  print('True action space: ' + str(acsp.low) + ', ' + str(acsp.high))
-  print('True state space: ' + str(obsp.low) + ', ' + str(obsp.high))
-  print('Filtered action space: ' + str(fenv.action_space.low) + ', ' + str(fenv.action_space.high))
-  print('Filtered state space: ' + str(fenv.observation_space.low) + ', ' + str(fenv.observation_space.high))
+  print "True action space: " + str(acsp.low) + "," + str(acsp.high)
+  print "True state space: " + str(obsp.low) + "," + str(obsp.high)
+  print "Filtered action space: " + str(fenv.action_space.low) + "," + str(fenv.action_space.high)
+  print "Filtered state space: " + str(fenv.observation_space.low) + "," + str(fenv.observation_space.high)
 
   return fenv

@@ -27,9 +27,9 @@ class CriticNetwork:
 
 		self.create_training_method()
 
-		# initialization 
+		# initialization
 		self.sess.run(tf.initialize_all_variables())
-			
+
 		self.update_target()
 
 	def create_training_method(self):
@@ -113,13 +113,11 @@ class CriticNetwork:
 		checkpoint = tf.train.get_checkpoint_state("critic-weights")
 		if checkpoint and checkpoint.model_checkpoint_path:
 			self.saver.restore(self.sess, checkpoint.model_checkpoint_path)
-			print ('Successfully loaded:'), checkpoint.model_checkpoint_path
+			print "Successfully loaded:", checkpoint.model_checkpoint_path
 		else:
-			print ('Could not find old network weights')
+			print "Could not find old network weights"
 
 	def save_network(self):
 		self.saver2 = tf.train.Saver()
 		# print 'save critic-network...'
 		self.saver2.save(self.sess, 'weights/critic-weights/critic-weights')
-
-		
