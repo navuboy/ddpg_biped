@@ -5,7 +5,7 @@ This repository contains the <b>simulation architecture</b> based in <b>Gazebo</
 </p>
 
 ## Planar Bipedal walking robot in Gazebo environment using Deep Deterministic Policy Gradient(DDPG).
-The autonomous walking of the bipedal walking robot is achieved using reinforcement learning algorithm called <a href="https://github.com/nav74neet/ddpg_biped#references"><b>Deep Deterministic Policy Gradient(DDPG)<sup>1</sup></b></a>. DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
+The <strong>autonomous walking</strong> of the bipedal walking robot is achieved using reinforcement learning algorithm called <a href="https://github.com/nav74neet/ddpg_biped#references"><b>Deep Deterministic Policy Gradient(DDPG)<sup>1</sup></b></a>. DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
 <p>The project details & the results of the experiment have been documented in the research manuscript, <b><a href="https://arxiv.org/abs/1807.05924v2">Bipedal walking robot using Deep Deterministic Policy Gradient</a></b></p>
 This project was developed at the <a href="https://sites.google.com/site/compintellab/home"><b>Computational Intelligence Laboratory, IISc, Bangalore</b></a>.
 
@@ -22,18 +22,18 @@ This project was developed at the <a href="https://sites.google.com/site/compint
 
 - ***walker_controller*** contains the reinforcement learning implementation of **DDPG algorithm** for control of the bipedal walking robot.
  
- ## Initial Learning to walk phases
+## Learning to walk, initial baby steps
 <p align= "center">
   <img src="walker_controller/src/training_1.gif/" height="250" width="400" hspace="5">
   <img src="walker_controller/src/training_2.gif/" height="250" width="400">
 </p>
  
- ## Post Learning Phase - Stable Bipedal walking
+## Stable bipedal walking
 <p align= "center">
   <img src="walker_controller/src/trained.gif/" height="300" width="550">
 </p>
 
-**<a href="https://goo.gl/1hwqJy*">Project video</a>**
+<strong><a href="https://goo.gl/1hwqJy*">Project video</a></strong>
 
 **Note:** A stable bipedal walking was acheived after training the model using a Nvidia GeForce GTX 1050 Ti GPU enabled system for over 41 hours. The visualization for the horizontal boom(attached to the waist) in turned off.
 
