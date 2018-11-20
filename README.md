@@ -15,7 +15,7 @@ This project was developed at the <a href="https://sites.google.com/site/compint
 - <b><a href="http://gazebosim.org/">Gazebo 7</a></b>
 - <b><a href="https://www.tensorflow.org/">TensorFlow: 1.1.0 [with GPU support]</a></b> 
 - <b><a href="https://gym.openai.com/docs/">gym: 0.9.3</a></b>
-- <b>Python 3.6</b>
+- <b>Python 2.7</b>
 
 ## File setup:
 - ***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo **launch** file.
