@@ -47,4 +47,4 @@
 **<a href="https://github.com/ioarun">Arun Kumar</a>** (arunkumar12@iisc.ac.in) & **<a href="http://www.aero.iisc.ernet.in/people/s-n-omkar/">Dr. S N Omkar</a>** (omkar@iisc.ac.in)
 
 ## Future work
-<p align= "justify">Implement state of the art RL algorithms(like, TRPO & PPO) for the same. Hopefully lead to faster training and less convergence time.</p>
+<p align= "justify">Implement state of the art RL algorithms(<b>TRPO & PPO</b>) for the same. Hopefully lead to faster training and less convergence time.</p>
