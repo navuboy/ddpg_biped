@@ -1,5 +1,5 @@
 # Reinforcement Learning for Bipedal walking robot.
-This repository contains the <b>simulation architecture</b> based in <b>Gazebo</b> environment for implementing reinforcement learning algorithm, <b>DDPG</b> for generating bipedal walking patterns for the robot. 
+This repository contains the <b>simulation architecture</b> based in <b>Gazebo</b> environment for implementing reinforcement learning algorithm, <b>DDPG</b> for generating bipedal walking patterns for the robot.
 <p align= "center">
   <img src="walker_controller/src/biped.gif/">
 </p>
@@ -13,7 +13,7 @@ This project was developed at the <a href="https://sites.google.com/site/compint
 - <b><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04</a></b>
 - <b><a href="http://wiki.ros.org/kinetic">ROS Kinetic</a></b>
 - <b><a href="http://gazebosim.org/">Gazebo 7</a></b>
-- <b><a href="https://www.tensorflow.org/">TensorFlow: 1.1.0 [with GPU support]</a></b> 
+- <b><a href="https://www.tensorflow.org/">TensorFlow: 1.1.0 [with GPU support]</a></b>
 - <b><a href="https://gym.openai.com/docs/">gym: 0.9.3</a></b>
 - <b>Python 2.7</b>
 
@@ -21,13 +21,13 @@ This project was developed at the <a href="https://sites.google.com/site/compint
 - ***walker_gazebo*** contains the robot model(both **.stl** files & **.urdf** file) and also the gazebo **launch** file.
 
 - ***walker_controller*** contains the reinforcement learning implementation of **DDPG algorithm** for control of the bipedal walking robot.
- 
+
 ## Learning to walk, initial baby steps
 <p align= "center">
   <img src="walker_controller/src/training_1.gif/" height="250" width="400" hspace="5">
   <img src="walker_controller/src/training_2.gif/" height="250" width="400">
 </p>
- 
+
 ## Stable bipedal walking
 <p align= "center">
   <img src="walker_controller/src/trained.gif/" height="300" width="550">
@@ -41,7 +41,10 @@ This project was developed at the <a href="https://sites.google.com/site/compint
 <ol>
   <li>Lillicrap, Timothy P., et al.<b><a href="https://arxiv.org/abs/1509.02971"> Continuous control with deep reinforcement learning.</a></b> arXiv preprint arXiv:1509.02971 (2015).</li>
 <li>Silver, David, et al.<b><a href="http://proceedings.mlr.press/v32/silver14.pdf"> Deterministic Policy Gradient Algorithms.</a></b> ICML (2014).</li>
-</ol> 
+</ol>
 
-## Project Collaborator(s): 
+## Project Collaborator(s):
 **<a href="https://github.com/ioarun">Arun Kumar</a>** (arunkumar12@iisc.ac.in) & **<a href="http://www.aero.iisc.ernet.in/people/s-n-omkar/">Dr. S N Omkar</a>** (omkar@iisc.ac.in)
+
+## Future work
+Implement state of the art RL algorithms(like, TRPO & PPO) for the same. Hopefully lead to faster training and less convergence time.
