@@ -35,7 +35,7 @@
 
 <strong><a href="https://goo.gl/1hwqJy*">Project video</a></strong>
 
-<p align="justify">**Note:** A stable bipedal walking was acheived after training the model using a <strong>Nvidia GeForce GTX 1050 Ti GPU</strong> enabled system for over 41 hours. The visualization for the horizontal boom(attached to the waist) is turned off.</p>
+**Note:** <p align="justify">A stable bipedal walking was acheived after training the model using a <strong>Nvidia GeForce GTX 1050 Ti GPU</strong> enabled system for over 41 hours. The visualization for the horizontal boom(attached to the waist) is turned off.</p>
 
 ## References:
 <ol>
