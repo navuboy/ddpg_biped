@@ -35,7 +35,7 @@ This project was developed at the <a href="https://sites.google.com/site/compint
 
 <strong><a href="https://goo.gl/1hwqJy*">Project video</a></strong>
 
-**Note:** A stable bipedal walking was acheived after training the model using a Nvidia GeForce GTX 1050 Ti GPU enabled system for over 41 hours. The visualization for the horizontal boom(attached to the waist) is turned off.
+**Note:** A stable bipedal walking was acheived after training the model using a <strong>Nvidia GeForce GTX 1050 Ti GPU</strong> enabled system for over 41 hours. The visualization for the horizontal boom(attached to the waist) is turned off.
 
 ## References:
 <ol>
@@ -47,4 +47,4 @@ This project was developed at the <a href="https://sites.google.com/site/compint
 **<a href="https://github.com/ioarun">Arun Kumar</a>** (arunkumar12@iisc.ac.in) & **<a href="http://www.aero.iisc.ernet.in/people/s-n-omkar/">Dr. S N Omkar</a>** (omkar@iisc.ac.in)
 
 ## Future work
-Implement state of the art RL algorithms(like, TRPO & PPO) for the same. Hopefully lead to faster training and less convergence time.
+<p align= "justify">Implement state of the art RL algorithms(like, TRPO & PPO) for the same. Hopefully lead to faster training and less convergence time.</p>
