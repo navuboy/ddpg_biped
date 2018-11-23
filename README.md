@@ -1,13 +1,13 @@
 # Reinforcement Learning for Bipedal walking robot.
-This repository contains the <b>simulation architecture</b> based in <b>Gazebo</b> environment for implementing reinforcement learning algorithm, <b>DDPG</b> for generating bipedal walking patterns for the robot.
+<p align="justify">This repository contains the <b>simulation architecture</b> based in <b>Gazebo</b> environment for implementing reinforcement learning algorithm, <b>DDPG</b> for generating bipedal walking patterns for the robot.</p>
 <p align= "center">
   <img src="walker_controller/src/biped.gif/">
 </p>
 
 ## Planar Bipedal walking robot in Gazebo environment using Deep Deterministic Policy Gradient(DDPG).
-The <strong>autonomous walking</strong> of the bipedal walking robot is achieved using reinforcement learning algorithm called <a href="https://github.com/nav74neet/ddpg_biped#references"><b>Deep Deterministic Policy Gradient(DDPG)<sup>1</sup></b></a>. DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.
-<p>The project details & the results of the experiment have been documented in the research manuscript, <b><a href="https://arxiv.org/abs/1807.05924v2">Bipedal walking robot using Deep Deterministic Policy Gradient</a></b></p>
-This project was developed at the <a href="https://sites.google.com/site/compintellab/home"><b>Computational Intelligence Laboratory, IISc, Bangalore</b></a>.
+<p align="justify">The <strong>autonomous walking</strong> of the bipedal walking robot is achieved using reinforcement learning algorithm called <a href="https://github.com/nav74neet/ddpg_biped#references"><b>Deep Deterministic Policy Gradient(DDPG)<sup>1</sup></b></a>. DDPG is one of the algorithms for <b>learning controls in continuous action spaces</b>.</p>
+<p align="justify">The project details & the results of the experiment have been documented in the research manuscript, <b><a href="https://arxiv.org/abs/1807.05924v2">Bipedal walking robot using Deep Deterministic Policy Gradient</a></b></p>
+<p align="justify">This project was developed at the <a href="https://sites.google.com/site/compintellab/home"><b>Computational Intelligence Laboratory, IISc, Bangalore</b></a>.</p>
 
 ## Dependencies & Packages:
 - <b><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04</a></b>
@@ -35,7 +35,7 @@ This project was developed at the <a href="https://sites.google.com/site/compint
 
 <strong><a href="https://goo.gl/1hwqJy*">Project video</a></strong>
 
-**Note:** A stable bipedal walking was acheived after training the model using a <strong>Nvidia GeForce GTX 1050 Ti GPU</strong> enabled system for over 41 hours. The visualization for the horizontal boom(attached to the waist) is turned off.
+<p align="justify">**Note:** A stable bipedal walking was acheived after training the model using a <strong>Nvidia GeForce GTX 1050 Ti GPU</strong> enabled system for over 41 hours. The visualization for the horizontal boom(attached to the waist) is turned off.</p>
 
 ## References:
 <ol>
