@@ -9,7 +9,7 @@
 <p align="justify">The project details & the results of the experiment have been documented in the research manuscript, <b><a href="https://arxiv.org/abs/1807.05924v2">Bipedal walking robot using Deep Deterministic Policy Gradient</a></b></p>
 <p align="justify">This project was developed at the <a href="https://sites.google.com/site/compintellab/home"><b>Computational Intelligence Laboratory, IISc, Bangalore</b></a>.</p>
 
-## Dependencies & Packages:
+## What you need before starting (Dependencies & Packages):
 - <b><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04</a></b>
 - <b><a href="http://wiki.ros.org/kinetic">ROS Kinetic</a></b>
 - <b><a href="http://gazebosim.org/">Gazebo 7</a></b>
