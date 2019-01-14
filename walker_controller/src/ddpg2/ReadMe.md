@@ -8,7 +8,7 @@ $ roslaunch walker_gazebo.launch
 $ cd ddpg_biped/walker_controller/src/ddpg2/
 $ python3 gym_ddpg3.py
 ```
-The <strong>reward function</strong> that is defined for the reinforcement problem is mentioned below (in <strong>gym_ddpg3.py</strong>):
+The <strong>reward function</strong> that is defined/shaped for the reinforcement problem is mentioned below (in <strong>gym_ddpg3.py</strong>):
 ```python 
     reward = -0.1  # when it used to run, used to be -0.1
     current_time = time.time()
