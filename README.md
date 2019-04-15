@@ -30,7 +30,7 @@
   <img src="walker_controller/src/trained.gif/" height="300" width="550">
 </p>
 
-<strong><a href="https://goo.gl/1hwqJy*">Project video</a></strong>
+<strong>[<a href="https://goo.gl/1hwqJy*">Project video</a>]</strong>
 
 **Note:** A stable bipedal walking was acheived after training the model using a <strong>Nvidia GeForce GTX 1050 Ti GPU</strong> enabled system for over 41 hours. The visualization for the horizontal boom(attached to the waist) is turned off.
 
